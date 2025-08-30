@@ -30,6 +30,8 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* responsive design
+  */
 }
 
 .choice:hover{
@@ -77,4 +79,76 @@ font-size: 2rem;
 display: inline;
 padding: 1rem;
 border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    height: auto;
+    line-height: normal;
+    padding: 1rem;
+  }
+
+  .choices {
+    flex-direction: column; 
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .choice {
+    height: 120px;
+    width: 120px;
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .score-board {
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  #user-score,
+  #comp-score {
+    font-size: 3rem;
+  }
+
+  #msg {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+/* Extra small screens (phones < 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .choice {
+    height: 100px;
+    width: 100px;
+  }
+
+  img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .score-board {
+    font-size: 1.2rem;
+  }
+
+  #user-score,
+  #comp-score {
+    font-size: 2.5rem;
+  }
+
+  #msg {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
 }
